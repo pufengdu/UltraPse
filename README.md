@@ -11,7 +11,9 @@ After your lua environment is ready, find out the location of your lua.hpp and l
 `xxxx/lua-5.3.4/install/include` and `xxxx/lua-5.3.4/install/lib`, where xxxx is usually the directory you unpack your lua source codes.
 
 Suppose the xxxx equals to ~/bin. You should then EDIT the following two lines of the Makefile of UltraPse.
+
 EXT_HEADER=***`~/bin/lua-5.3.4/install/include`***
+
 EXT_LIB=***`~/bin/lua-5.3.4/install/lib`***
 
 After saving the Makefile, just type make. You will get UltraPse compiled. The upse is the executable of UltraPse software.
