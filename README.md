@@ -3,7 +3,7 @@
 
 ## Installation
 
-This source code in this repositiory is for Ubuntu Linux platform. We have tested these codes on **Ubuntu 14.04.5 LTS**. There is no guarantee that these codes can be compiled and executed on other platforms without modifications.
+Source code in this repositiory is for Ubuntu Linux platform. We have tested these codes on **Ubuntu 14.04.5 LTS**. There is no guarantee that these codes can be compiled and executed on other platforms without modifications.
 
 This codes depends on the Lua devel version 5.3. It has been proven that lower version will not work. Please go to http://www.lua.org/download.html. Download version 5.3 lua environment and configure that on your machine.
 
