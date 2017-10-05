@@ -167,7 +167,11 @@ void UltraPse::Operator::CreatNotation()
                 PCProperty *NewProp = RawPropLib[p]->Convert(Note, true, PropTemplate);
                 //If conversion is correct, store the property temporarily
                 if (NewProp)
+				{
+					UltraPse::NormalizeValues(NewProp->GetValues(), NewProp->GetNote()->GetTotalNotations());
+					NewProp->PreCompute();
                     t_props.push_back(NewProp);
+				}
                 else
                     ErrorAbort(ErrorCode::NoSuchProperty);
             }

@@ -52,7 +52,11 @@ UltraPse::PCProperty::~PCProperty()
 
 void UltraPse::PCProperty::SetValue(char *Note, float v)
 {
-    Values[Assoc_Note->MapNotationToIndex(Note)] = v;
+    //Values[Assoc_Note->MapNotationToIndex(Note)] = v;
+	if (Assoc_Note->GetNotationLength() > 1)
+        Values[Assoc_Note->MapNotationToIndex(Note)] = v;
+    else
+        Values[Assoc_Note->ConNotationToIndex(Note)] = v;
 }
 
 void UltraPse::PCProperty::CopyValues(float *s)
