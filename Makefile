@@ -8,8 +8,9 @@ CFLAGS=-march=native -O3 -std=c++1y -m64 -I$(EXT_HEADER)
 TARGET=upse
 SRC=$(wildcard *.cpp)
 OBJECTS=$(patsubst %cpp, %o, $(SRC))
-all:$(TARGET)
 LD_OPTS=-L$(EXT_LIB) -llua -ldl -lm -march=native
+
+all:$(TARGET)
 
 %.o: %.cpp
 	$(CC) $(CFLAGS) -o $@ -c $<
