@@ -1,6 +1,6 @@
 # THE FOLLOWING TWO LINES MUST BE SPECIFIED FOR LUA-DEVEL
-EXT_HEADER=
-EXT_LIB=
+EXT_HEADER=../lua/install/include
+EXT_LIB=../lua/install/lib
 
 # Here, we begin the building process
 CC=g++
@@ -17,7 +17,11 @@ LD_OPTS=-L$(EXT_LIB) -llua -ldl -lm -march=native
 $(TARGET):$(OBJECTS)
 	$(CC) -o $@ $(OBJECTS) $(LD_OPTS)
 
-.PHONY: clean
+.PHONY: clean test
 clean:
 	rm *.o
 	rm upse
+
+test: upse tdfs/classic-pseaac.lua test/tiny.fas
+	./upse -i test/tiny.fas -f svm -u tdfs/classic-pseaac.lua -t 1 -l 10 -w 0.05
+
