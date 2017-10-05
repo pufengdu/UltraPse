@@ -1,0 +1,1 @@
+upse -i test/tiny.fas -u tdfs/classic-pseaac.lua -n stdprot -m pse -t 1 -l 10 -w 0.05 -p CPSEH1 -p CPSEH2 -p CPSEM -f svm
