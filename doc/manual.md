@@ -514,11 +514,35 @@ This function should also return a table object, which contain all the descripto
 
 ### 4 Synopsis
 
+#### 4.1 Amino acid compositions
+
+The following command compute only amino acid compositons for all sequences in tiny.fas
+
+```Shell
+./upse -n stdprot -m comp -f svm -i test/tiny.fas
+```
+
 #### 4.1 Pseudo-amino acid compositions
+
+The following command use a pre-defined TDF to compute Classic Type-I PseAAC, with $\lambda = 10, \omega = 0.05$.
+
+```Shell
+./upse -i test/tiny.fas -u tdfs/classic-pseaac.lua -t 1 -l 10 -w 0.05 -f svm
+```
+
+The following command use a pre-defined TDF to compute Classic Type-II PseAAC, with $\lambda = 10, \omega = 0.05$.
+
+```Shell
+./upse -i test/tiny.fas -u tdfs/classic-pseaac.lua -t 2 -l 10 -w 0.05 -f svm
+```
 
 #### 4.2 Pseudo-Dinucleotide compositions
 
-#### 4.3 Amino acid compositions
+The following command use a pre-defined TDF to compute Type-I PseDNC, with $\lambda = 3, \omega = 0.5$.
+
+```Shell
+./upse -i test/tiny-dna.fas -u tdfs/psednc.lua -t 1 -l 3 -w 0.5 -f svm
+```
 
 ### 5 Other Information
 
