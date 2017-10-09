@@ -17,31 +17,31 @@
 	 * along with UltraPse.  If not, see <http://www.gnu.org/licenses/>.        *
 	 ****************************************************************************/
 
-Task definition file for :
+	Task definition file for :
 
 	Classic Pseudo amino acid composition (PseAAC) - Type I / II
 
-As the Type I/II PseAAC require some physicochemical properties that are not
-resides in the AAIndex database. We provide this task definition for the users 
-who needs to produce exactly the same representations.
+	As the Type I/II PseAAC require some physicochemical properties that are not
+	resides in the AAIndex database. We provide this task definition for the users 
+	who needs to produce exactly the same representations.
 
-To produce a Classic PseAAC Type - I, use the following command:
+	To produce a Classic PseAAC Type - I, use the following command:
 
-upse -i test/tiny.fas -u tdfs/classic-pseaac.lua -n stdprot -m pse -t 1 -l 10 -w 0.05 -p CPSEH1 -p CPSEH2 -p CPSEM -f svm
+	upse -i test/tiny.fas -u tdfs/classic-pseaac.lua -n stdprot -m pse -t 1 -l 10 -w 0.05 -p CPSEH1 -p CPSEH2 -p CPSEM -f svm
 
-The "test/tinu.fas" is your fasta file, you can change the name
-The "-l 10 -w 0.05" specify the Lambda and Oemga parameters in PseAAC
-The CPSEH1, CPSEH2 and CPSEM are the names of physicochemical properties for PseAAC
+	The "test/tinu.fas" is your fasta file, you can change the name
+	The "-l 10 -w 0.05" specify the Lambda and Oemga parameters in PseAAC
+	The CPSEH1, CPSEH2 and CPSEM are the names of physicochemical properties for PseAAC
 
-To produce a Classic PseAAC Type - II, use the following command:
+	To produce a Classic PseAAC Type - II, use the following command:
 
-upse -i test/tiny.fas -u tdfs/classic-pseaac.lua -n stdprot -m pse -t 2 -l 10 -w 0.05 -p CPSEH1 -p CPSEH2 -f svm
+	upse -i test/tiny.fas -u tdfs/classic-pseaac.lua -n stdprot -m pse -t 2 -l 10 -w 0.05 -p CPSEH1 -p CPSEH2 -f svm
 
-The "test/tinu.fas" is your fasta file, you can change the name
-The "-l 10 -w 0.05" specify the Lambda and Oemga parameters in PseAAC
-The CPSEH1 and CPSEH2 are the names of physicochemical properties for PseAAC
+	The "test/tinu.fas" is your fasta file, you can change the name
+	The "-l 10 -w 0.05" specify the Lambda and Oemga parameters in PseAAC
+	The CPSEH1 and CPSEH2 are the names of physicochemical properties for PseAAC
+--]]
 
-]]--
 H1 = {
 	Template="";
 	ID = "CPSEH1";
