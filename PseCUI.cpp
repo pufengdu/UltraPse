@@ -36,18 +36,18 @@ namespace UltraPse
     /* The options we understand. */
     struct argp_option options[] =
     {
-        {"in", 'i',    "FILE",  0,  "A FASTA format file for input. The comment line of a sequence in this file should be unique. If you do not specify an in-file, the program will try to read it from keyboard."},
-        {"out",   'o',    "FILE",  0,  "A file for storing the results. If you do not specify an out-file, the results will be written on screen." },
-        {"note",'n',"{stdprot|didna|dirna|tridna}", 0, "Sequence definition types. There are four internal types, if the user want to use their own sequence type, they have to use a task definition file."},
+        {"in", 'i',    "FILE",  0, "A FASTA format file for input. The comment line of a sequence in this file should be unique. If you do not specify an in-file, the program will try to read it from keyboard."},
+        {"out",   'o',    "FILE",  0, "A file for storing the results. If you do not specify an out-file, the results will be written on screen." },
+        {"note",'n',"{stdprot|didna|dirna|tridna}                         ", 0,"Sequence definition types. There are four internal types. If the user want to use their own sequence type, a task definition file id required."},
         {"format",  'f',    "{svm|tsv|csv}",  0,"Output format."},
-        {"mode",  'm',    "{comp|pse|dpc|cov|lua|pseb3|user,LIB_OBJECT,MOD_NAME}", 0,  "Representation module choices. This option can appear for multiple times."},
+        {"mode",'m',"{comp|pse|dpc|cov|lua|pseb3|user,LIB_OBJECT,MOD_NAME}", 0,  "Representation module choices. This option can appear for multiple times."},
         {"user-task", 'u', "TASK-FILE", 0, "Task description file."},
         {"query", 'q', "{prop|mode|note|all}",0,"Query status of everything."},
         {"property", 'p', "PROP-ID", 0, "Activate the property PROP-ID for current task. This option can appear for multiple times."},
-        {"omega", 'w', "W", 0, "A decimal number for pseknc and pseaac mode, parameter w. This option can have user defined purpose."},
-        {"lambda", 'l', "L", 0, "An integer for maximal lag. This option can have user defined purpose."},
-        {"type",'t',"T",0, "Type parameter in pseknc, pseaac. This option can have user defined purpose."},
-        {"k-tuple",'k',"K",0,"Use K-tuples in computation. This option can have user defined purpose."},
+        {"omega", 'w', "W", 0, "A mode specific option. Omega parameter in the pse module. This option can have user defined purpose."},
+        {"lambda", 'l', "L", 0, "A mode specific option. Lambda parameter in the pse module. This option can have user defined purpose."},
+        {"type",'t',"T",0, "A mode specific option. Type parameter in the pse / cov module. This option can have user defined purpose."},
+        {"k-tuple",'k',"K",0,"A mode specific option. Currently not used in internal modules. This option can have user defined purpose."},
         {"arguments",'a',"LUA-EXPR",0,"Lua expression to provide extra module-specific parameters. This option can appear for multiple times."},
         {"validate",'v',0,0,"Validate sequences automatically. Sequence with invalid notations will be dropped automatically."},
         { 0 }
