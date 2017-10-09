@@ -19,6 +19,6 @@ EXT_LIB=`~/bin/lua-5.3.4/install/lib`
 After saving the Makefile, just type make. You will get UltraPse compiled. The upse is the executable of UltraPse software.
 To test your compilation, just type **./upse --help** or **./upse -q prop -n stdprot**
 
-For ***Microsoft Windows*** platform, just send emails to PufengDu@gmail.com. You will recieve a compiled executable for your Windows environment.
+For ***Microsoft Windows*** platform, download the Win-x86_64.zip package from Release/Win-x86_64. Unpack it to your favoured location and use command line environment to use the executable. The documents, plugins, and test datasets are included.
 
 If you got any difficulties, just send emails to PufengDu@gmail.com to complain. We will try out best to fix it asap.
