@@ -1,5 +1,5 @@
 #include <lua.hpp>
-#include "../../../UltraPSE/PseModule.h"
+#include "../../PseModule.h"
 
 #ifndef PSEMODINTERFACE_H_INCLUDED
 #define PSEMODINTERFACE_H_INCLUDED

@@ -374,13 +374,20 @@ void UltraPse::LoadUserBinaryModule(const char *fn, bool LoadExtFuncInRealTime)
     if (!ModuleHandle)
         ErrorAbort(ErrorCode::SharedObjectError);
 
+	//	printf("Library Loaded\n");
+	
+	
     _HandleRepo[fn] = ModuleHandle;
 
     ModIFunc PseIF = (ModIFunc)dlsym(ModuleHandle, "GetInterfaces");
     VMIFunc VMIF = (VMIFunc)dlsym(ModuleHandle,"GetVMInterfaces");
     if (!PseIF || !VMIF)
         ErrorAbort(ErrorCode::SharedObjectError);
-    PseModuleInterface *UserModIF = PseIF();
+
+	//	printf("Interfaces located\n");
+	
+
+	PseModuleInterface *UserModIF = PseIF();
     VMExtInterface *UserVMIF = VMIF();
     while (UserModIF->ModuleName)
     {
