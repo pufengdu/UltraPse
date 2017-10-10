@@ -6,9 +6,11 @@ EXT_LIB=../lua/install/lib
 CC=g++
 CFLAGS=-march=native -O3 -std=c++1y -m64 -I$(EXT_HEADER)
 TARGET=upse
+TARGET_STAT=upse-stat
 SRC=$(wildcard *.cpp)
 OBJECTS=$(patsubst %cpp, %o, $(SRC))
 LD_OPTS=-L$(EXT_LIB) -llua -ldl -lm -march=native
+#LD_STAT_OPTS=-L$(EXT_LIB) -ldl -lm -march=native -Bstatic -llua
 
 SO_BASE_SRC=BioNotations.cpp PCProperty.cpp Common.cpp
 SO_BASE_OBJS=$(patsubst %cpp, bso/%o, $(SO_BASE_SRC))
@@ -20,12 +22,17 @@ SO_MODES_SOS=OneHot.so
 
 all:$(TARGET)
 
+# all_stat:$(TARGET_STAT)
+
 %.o: %.cpp
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 $(TARGET):$(OBJECTS)
 	$(CC) -o $@ $(OBJECTS) $(LD_OPTS)
 
+#$(TARGET_STAT): $(OBJECTS)
+#	$(CC) -o $@ $(OBJECTS) $(LD_STAT_OPTS)
+	
 modules: $(SO_MODES_SOS)
 	
 $(SO_MODES_SOS):%.so: $(SO_BASE_OBJS) $(SO_MODES_OBJS) $(SO_TEMPL_OBJS)
