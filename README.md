@@ -30,3 +30,8 @@ For ***Microsoft Windows*** platform, just download the Win-x86_64.zip package f
 For ***Microsoft Windows*** platform, you can use the upse-test.cmd to have a quick view.
 
 If you got any difficulties, just send emails to PufengDu@gmail.com to complain. We will try out best to fix it asap.
+
+## Citation
+Please cite the following paper if you find UltraPse useful in your work:
+
+[1] **Du, Pu-Feng**; Zhao, Wei; Miao, Yang-Yang; Wei, Le-Yi; Wang, Likun.	2017. "UltraPse: A Universal and Extensible Software Platform for Representing Biological Sequences." *Int. J. Mol. Sci.* 18, no. 11: 2400.
