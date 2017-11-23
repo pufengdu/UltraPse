@@ -34,4 +34,4 @@ If you got any difficulties, just send emails to PufengDu@gmail.com to complain.
 ## Citation
 Please cite the following paper if you find UltraPse useful in your work:
 
-[1] **Du, Pu-Feng**; Zhao, Wei; Miao, Yang-Yang; Wei, Le-Yi; Wang, Likun.	2017. "UltraPse: A Universal and Extensible Software Platform for Representing Biological Sequences." *Int. J. Mol. Sci.* 18, no. 11: 2400.
+[1] **Du, Pu-Feng**; Zhao, Wei; Miao, Yang-Yang; Wei, Le-Yi; Wang, Likun.	2017. "UltraPse: A Universal and Extensible Software Platform for Representing Biological Sequences." *Int. J. Mol. Sci.* 18, no. 11: 2400. http://dx.doi.org/10.3390/ijms18112400
